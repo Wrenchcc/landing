@@ -204,11 +204,12 @@ p {
 h1 {
   font-size: 48px;
   line-height: 80px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 500px;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   position: relative;
 }
 
@@ -223,6 +224,7 @@ body,
   position: absolute;
   top: 60px;
   left: 60px;
+  display: block;
 }
 
 .container {
@@ -244,6 +246,7 @@ body,
   display: flex;
   flex-direction: column;
   background: black;
+  position: relative;
 }
 
 .row {
@@ -263,9 +266,121 @@ body,
 }
 
 .follow {
-  position: fixed;
-  bottom: 60px;
-  left: 0;
+  position: absolute;
+  bottom: 140px;
+  left: -20px;
   transform: rotate(-90deg);
-  color: black;
+  color: #a18a6b;
+}
+
+.form {
+  padding: 0 50px 0 60px;
+}
+
+.form,
+.questions,
+.column-2 a {
+  color: white;
+}
+
+.form label,
+.form input {
+  display: block;
+}
+
+.form label {
+  font-size: 21px;
+}
+
+.form input {
+  font-family: 'Inter UI';
+  font-weight: 400;
+  outline: none;
+  color: white;
+  width: 80%;
+  padding: 16px 0;
+  font-size: 17px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+.questions {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.questions a {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1020px) {
+  .container {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 52px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    margin-top: 60px;
+    position: static;
+    text-align: center;
+  }
+
+  .row {
+    flex: none;
+  }
+
+  .row-1 {
+    height: 480px;
+    background: url('/assets/img/cover-mobile@2x.png') no-repeat;
+    background-size: cover;
+  }
+
+  .row-2 {
+    display: block;
+    padding: 100px 20px;
+  }
+
+  .form {
+    padding: 0;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  .questions {
+    text-align: center;
+    padding-top: 60px;
+    position: static;
+  }
+
+  .follow {
+    bottom: auto;
+    top: 30px;
+    left: -10px;
+  }
+
+  .follow span {
+    display: none;
+  }
 }

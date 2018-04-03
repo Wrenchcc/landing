@@ -6,10 +6,28 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/favicon/favicon-196x196.png">
         <link rel="stylesheet" href="assets/style.css">
+
+        <script>
+        // handleSubmit(evt) {
+//  evt.preventDefault();
+//  const { email, form } = this.refs;
+//
+//  fetch(form.action, {
+//    method: 'POST',
+//    body: JSON.stringify({ email: email.value }),
+//    headers: {
+//      'Content-Type': 'application/json',
+//    },
+//  }).then(() => {
+//    window.ga('send', 'event', 'Email', email.value, 'Pre-launch');
+//  });
+// }
+</script>
     </head>
     <body>
-      <a href="/"><img title="Wrench" src="assets/img/logo.svg" class="logo"/></a>
+      <a class="logo" href="/"><img title="Wrench" src="assets/img/logo.svg"/></a>
       <div class="container">
       <div class="column column-1">
         <h1>Post your projects, watch others, discuss and learn together.</h1>
@@ -17,10 +35,16 @@
         <div class="column column-2">
           <div class="row row-1"></div>
           <div class="row row-2">
-            Other questions? <a href="mailto:hello@wrench.cc">Mail us.</a>
+            <form class="form" action="https://email.bubba.cc/subscribe">
+              <label for="email">Sign up to the beta</label>
+              <input type="email" autocomplete="off" name="email" id="email" required placeholder="Email" autocapitalize="off">
+            </form>
+            <div class="questions">
+              Other questions? <a href="mailto:hello@wrench.cc">Mail us.</a>
+            </div>
           </div>
         </div>
       </div>
-      <a class="follow" href="https://instagram.com/wrench.cc">Follow us on instagram</a>
+      <a class="follow" href="https://instagram.com/wrench.cc"><span>Follow us on </span>Instagram</a>
     </body>
 </html>
