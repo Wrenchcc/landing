@@ -416,7 +416,7 @@ body,
   }
 
   .row-1 {
-    height: 480px;
+    height: 375px;
     background: url('/assets/img/photo@3x.jpg') no-repeat;
     background-size: cover;
   }
