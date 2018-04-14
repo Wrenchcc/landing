@@ -292,6 +292,7 @@ body,
 }
 
 .form button {
+  -webkit-appearance: none;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -ms-transition: opacity .2s ease-in-out;
@@ -343,6 +344,7 @@ body,
 }
 
 .form input {
+  -webkit-appearance: none;
   font-family: 'Inter UI';
   font-weight: 400;
   outline: none;
@@ -379,6 +381,7 @@ body,
 
 @media only screen and (max-width: 1020px) {
   .container {
+    margin-top: 100px;
     flex-direction: column;
   }
 
@@ -388,7 +391,7 @@ body,
   }
 
   .description {
-    padding: 0 20px 50px;
+    padding: 0 20px 80px;
   }
 
   .description p {
@@ -402,8 +405,9 @@ body,
     position: static;
   }
 
+  .column-2,
   .column-1 {
-    justify-content: left;
+    display: block;
   }
 
   .row {
