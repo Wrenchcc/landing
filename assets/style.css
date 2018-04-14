@@ -344,6 +344,7 @@ body,
 }
 
 .form input {
+  -webkit-border-radius: 0px;
   -webkit-appearance: none;
   font-family: 'Inter UI';
   font-weight: 400;
