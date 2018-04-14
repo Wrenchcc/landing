@@ -450,4 +450,9 @@ body,
   .follow span {
     display: none;
   }
+
+  .form button,
+  .form .check {
+    right: 20px;
+  }
 }
