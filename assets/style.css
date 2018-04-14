@@ -322,6 +322,11 @@ body,
   position: absolute;
   right: 20%;
   top: 21px;
+  z-index: 0;
+}
+
+.mobile {
+  display: none;
 }
 
 .form .check.show {
@@ -351,7 +356,8 @@ body,
   outline: none;
   color: white;
   width: 80%;
-  padding: 21px 0;
+  padding: 11px 0;
+  height: 40px;
   font-size: 17px;
   background: none;
   border: none;
@@ -444,7 +450,7 @@ body,
     bottom: auto;
     left: auto;
     top: 30px;
-    right: 0;
+    right: -10px;
   }
 
   .follow span {
@@ -453,6 +459,14 @@ body,
 
   .form button,
   .form .check {
-    right: 20px;
+    right: 0;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
   }
 }
