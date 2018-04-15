@@ -34,9 +34,12 @@ $(document).ready(function() {
           $('.form button').removeClass('show');
           $('.form .done').addClass('show');
 
-          if(window.ga) {
-            window.ga('send', 'event', 'Email', email, 'Pre-launch');
-          }
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Email',
+            eventAction: email,
+            eventLabel: 'Pre-launch',
+          });
         }
       },
     });
