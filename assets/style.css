@@ -322,7 +322,7 @@ body,
   position: absolute;
   right: 20%;
   top: 21px;
-  z-index: 0;
+  visibility: hidden;
 }
 
 .mobile {
@@ -331,6 +331,7 @@ body,
 
 .form .check.show {
   opacity: 1;
+  visibility: visible;
 }
 
 .form,

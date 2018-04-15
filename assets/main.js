@@ -18,19 +18,27 @@ $(document).ready(function() {
     var form = $(this)
     var email = $('#email').val()
 
-    fetch(form.attr('action'), {
-      method: 'POST',
-      body: JSON.stringify({ email: email }),
-      headers: {
-        'Content-Type': 'application/json',
+    $.ajax({
+      type: 'POST',
+      url: form.attr('action'),
+      data: JSON.stringify({ email: email }),
+      contentType: 'application/json',
+      dataType: 'json',
+      success: function(res){
+        if(!res.success) {
+          $('#email').val('');
+          $('.form button').removeClass('show');
+          $('.form .already').addClass('show');
+        } else {
+          $('#email').val('');
+          $('.form button').removeClass('show');
+          $('.form .check').addClass('show');
+
+          if(window.ga) {
+            window.ga('send', 'event', 'Email', email, 'Pre-launch');
+          }
+        }
       },
-    }).then(function() {
-      if(window.ga) {
-        window.ga('send', 'event', 'Email', email, 'Pre-launch');
-        $('#email').val('');
-        $('.form button').removeClass('show');
-        $('.form .check').addClass('show');
-      }
     });
   });
 });
