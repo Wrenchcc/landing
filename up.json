@@ -1,0 +1,17 @@
+{
+  "name": "wrench-landing",
+  "type": "static",
+  "profile": "bubba",
+  "region": ["eu-central-1"],
+  "stages": {
+    "production": {
+      "domain": "wrench.cc"
+    },
+    "staging": {
+      "domain": "stage.wrench.cc"
+    }
+  },
+  "static": {
+    "dir": "public"
+  }
+}

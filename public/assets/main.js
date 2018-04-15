@@ -25,14 +25,14 @@ $(document).ready(function() {
       contentType: 'application/json',
       dataType: 'json',
       success: function(res){
-        if(!res.success) {
+        if(res.success === false) {
           $('#email').val('');
           $('.form button').removeClass('show');
           $('.form .already').addClass('show');
         } else {
           $('#email').val('');
           $('.form button').removeClass('show');
-          $('.form .check').addClass('show');
+          $('.form .done').addClass('show');
 
           if(window.ga) {
             window.ga('send', 'event', 'Email', email, 'Pre-launch');
