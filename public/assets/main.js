@@ -34,11 +34,9 @@ $(document).ready(function() {
           $('.form button').removeClass('show');
           $('.form .done').addClass('show');
 
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'Email',
-            eventAction: email,
-            eventLabel: 'Pre-launch',
+          gtag('event', email, {
+            'event_category': 'Email',
+            'event_label': 'Pre-launch'
           });
         }
       },

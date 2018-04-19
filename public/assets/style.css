@@ -264,7 +264,7 @@ body,
 }
 
 .row-1 {
-  background: url('/assets/img/photo@3x.jpg') no-repeat;
+  background: url('/assets/img/photo-desktop@3x.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -424,7 +424,7 @@ body,
 
   .row-1 {
     height: 375px;
-    background: url('/assets/img/photo@3x.jpg') no-repeat;
+    background: url('/assets/img/photo-mobile@3x.jpg') no-repeat;
     background-size: cover;
   }
 
