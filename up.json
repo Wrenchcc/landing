@@ -1,14 +1,11 @@
 {
   "name": "wrench-landing",
   "type": "static",
-  "profile": "bubba",
-  "region": ["eu-central-1"],
+  "profile": "wrench-api",
+  "regions": ["us-east-1"],
   "stages": {
     "production": {
       "domain": "wrench.cc"
-    },
-    "staging": {
-      "domain": "stage.wrench.cc"
     }
   },
   "static": {
